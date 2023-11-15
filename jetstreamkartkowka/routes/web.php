@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Htpp\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +26,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/car',function(){
+    return view('car1');
+});
+
+Route::get('CarController', [\App\Http\Controllers\CarController::class,'showCar']);
